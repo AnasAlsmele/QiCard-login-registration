@@ -1,0 +1,231 @@
+/*
+    Anas Alsmele - Full-Stack Web Developer
+    ++++++++++++++
+    find me out on:
+    # Github:     https://github.com/AnasAlsmele
+    # LinkedIn:   https://www.linkedin.com/in/anasalsmele/
+    ++++++++++++++
+    or contact me on:
+    # E-mail:     anasalsmele@gmail.com
+*/
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+}
+.main-div{
+    display: flex;
+    height: 100vh;
+}
+
+/*
+    ++++++++++ LEFT SIDE OF THE PAGE
+*/
+.left-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    background-color: #FFD700;
+}
+.login-div, .login-div-hidden{
+    display: flex;
+    flex-direction: column;
+    background-color: #FFFFFF;
+    padding: 2em;
+    border: 4px solid #385A64;
+    border-radius: 10px;
+    min-width: 50%;
+    opacity: 1;
+    transition: opacity 2s;
+}
+.login-div-hidden{
+    opacity: 0;
+    display: none;
+}
+.login-title{
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+    margin: 1em 0 1.5em;
+    color: #1B2E35;
+}
+
+/* input */
+.input-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: .5em;
+    border: 1px solid #e5e5e5;
+}
+.input-icon{
+    color: #385A64;
+    font-size: 1.2em;
+    padding: 1.1em;
+    align-self: flex-start;
+}
+.input{
+    padding: 1.5em .2em;
+    border: none;
+    outline: none;
+    font-size: 1.1em;
+    flex: 1;
+}
+.input::placeholder{
+    color: #1B2E35;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: opacity .25s;
+}
+.input:focus::placeholder{
+    opacity: .4;
+}
+
+/* buttons */
+.btn{
+    background-color: #e5e5e5;
+    border: none;
+    padding: .75em 1.5em;
+    font-size: 1.2em;
+    margin: .5em;
+    font-weight: bold;
+    cursor: pointer;
+    border-left: 0px solid transparent;
+    transition: background .25s, border .25s;
+}
+.btn:hover{
+    background-color: #FFD700;
+    border-left: 10px solid #1B2E35;
+}
+
+/* links */
+.p{
+    text-align: center;
+    color: #a9a9a9;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-top: 1px solid #e5e5e5;
+    padding: 1em .5em 0 .5em;
+    margin: .5em;
+}
+.p .a{
+    color: #385A64;
+}
+.p .a:hover{
+    color: #FFD700;
+}
+
+/* radio buttons */
+.radios-div{
+    display: flex;
+    padding: 1em 0;
+    flex-direction: column;
+    flex: 1;
+}
+.radio-div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: .5em;
+}
+.radio-circle-div{
+    border: 2px solid #1B2E35;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: .5em;
+    padding: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.radio-circle, .radio-circle-active{
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background-color: transparent;
+}
+.radio-circle-active{
+    background-color: #385A64;
+}
+.radio-label{
+    font-size: 1.1em;
+    color: #1B2E35;
+    font-weight: bold;
+    flex: 1;
+    cursor: pointer;
+}
+
+/*
+    ++++++++++ RIGHT SIDE OF THE PAGE
+*/
+.right-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+/* images */
+.imgs-holder{
+    position: relative;
+    width: 40vw;
+    height: 40vw;
+}
+.img, .img-hidden{
+    width: 100%;
+    position: absolute;
+    z-index: 11;
+    opacity: 1;
+    transition: opacity 1s;
+}
+.img-hidden{
+    z-index: 10;
+    opacity: 0;
+}
+
+/* with small screens */
+@media only screen and (max-width: 1024px){
+    .right-div{
+        display: none;
+    }
+}
+
+/* with mobile devices */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2){
+    .login-div{
+        flex: 1;
+        margin: 2em;
+    }
+    .login-title{
+        font-size: 6em;
+    }
+    .input-icon{
+        font-size: 3em;
+    }
+    .input{
+        font-size: 3em;
+    }
+    .btn{
+        font-size: 3em;
+    }
+    .p{
+        font-size: 2.4em;
+    }
+    .radio-circle-div{
+        width: 36px;
+        height: 36px;
+    }
+    .radio-circle-active{
+        width: 33px;
+        height: 33px;
+    }
+    .radio-label{
+        font-size: 3em;
+    }
+    .right-div{
+        display: none;
+    }
+}
