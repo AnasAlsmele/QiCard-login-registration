@@ -1,0 +1,96 @@
+<!--
+    Anas Alsmele - Full-Stack Web Developer
+    ++++++++++++++
+    find me out on:
+    # Github:     https://github.com/AnasAlsmele
+    # LinkedIn:   https://www.linkedin.com/in/anasalsmele/
+    ++++++++++++++
+    or contact me on:
+    # E-mail:     anasalsmele@gmail.com
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login/Registration</title>
+    <link rel="shortcut icon" href="https://anasalsmele.github.io/img/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.css" />
+    <link rel="stylesheet" href="css/index.css" />
+    <script src="js/index.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+    <div class="main-div">
+        <div class="left-div">
+            <div id="login-div" class="login-div">
+                <p class="login-title">Login</p>
+                <form action="index.html" method="POST" id="login-form">
+                    <div class="input-div">
+                        <i class="input-icon fas fa-user"></i>
+                        <input type="text" id="login-username" name="login-username" class="input" placeholder="Username" required="required" />
+                    </div>
+                    <div class="input-div">
+                        <i class="input-icon fas fa-lock"></i>
+                        <input type="password" id="login-password" name="login-password" class="input" placeholder="Password" required="required" />
+                    </div>
+                    <input type="submit" id="login-btn" name="login-btn" class="btn" value="Login" />
+                </form>
+                <p class="p">don't you have an account, <a href="#" target="_self" class="a" onclick="changePage(event)" data-p="register" data-c="login">register</a></p>
+            </div>
+            <div id="register-div" class="login-div-hidden">
+                <p class="login-title">Register</p>
+                <form action="index.html" method="POST" id="register-form">
+                    <div class="input-div">
+                        <i class="input-icon fas fa-envelope"></i>
+                        <input type="email" id="reg-email" name="reg-email" class="input" placeholder="Email Address" required="required" />
+                    </div>
+                    <div class="input-div">
+                        <i class="input-icon fas fa-lock"></i>
+                        <input type="password" id="reg-password" name="reg-password" class="input" placeholder="Password" required="required" />
+                    </div>
+                    <div class="input-div">
+                        <i class="input-icon fas fa-user"></i>
+                        <input type="text" id="reg-username" name="reg-username" class="input" placeholder="Username" required="required" />
+                    </div>
+                    <div class="input-div">
+                        <i class="input-icon fas fa-calendar"></i>
+                        <input type="date" id="reg-birthdate" name="reg-birthdate" class="input" required="required" />
+                    </div>
+                    <div class="input-div">
+                        <i class="input-icon fas fa-venus-mars"></i>
+                        <div class="radios-div">
+                            <div class="radio-div">
+                                <div class="radio-circle-div">
+                                    <div id="male-circle" class="radio-circle"></div>
+                                </div>
+                                <input type="radio" id="reg-gender-male" name="reg-gender" value="male" hidden="hidden" onchange="radioInput(event)" data-r="male" />
+                                <label for="reg-gender-male" class="radio-label">Male</label>
+                            </div>
+                            <div class="radio-div">
+                                <div class="radio-circle-div">
+                                    <div id="female-circle" class="radio-circle"></div>
+                                </div>
+                                <input type="radio" id="reg-gender-female" name="reg-gender" value="female" hidden="hidden" onchange="radioInput(event)" data-r="female" />
+                                <label for="reg-gender-female" class="radio-label">Female</label>
+                            </div>
+                        </div>
+                    </div>
+                    <input type="submit" id="reg-btn" name="reg-btn" class="btn" value="Register" />
+                    <input type="reset" class="btn" value="Reset" onclick="radioReset()" />
+                </form>
+                <p class="p">do you have an account, <a href="#" target="_self" class="a" onclick="changePage(event)" data-p="login" data-c="register">login</a></p>
+            </div>
+        </div>
+        <div class="right-div">
+            <div class="imgs-holder">
+                <img src="imgs/login.jpg" alt="login-img" id="login-img" class="img" />
+                <img src="imgs/register.jpg" alt="register-img" id="register-img" class="img-hidden" />
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
